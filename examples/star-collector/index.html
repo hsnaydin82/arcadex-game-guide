@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Yıldız Toplayıcı · Star Collector</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stage" aria-label="Oyun alanı / Game area"></canvas>
+
+  <header class="hud">
+    <span id="level">Bölüm 1</span>
+    <span id="score">0</span>
+    <button id="settingsBtn" type="button">Ayarlar</button>
+  </header>
+
+  <section id="menu" class="panel">
+    <h1>Yıldız Toplayıcı</h1>
+    <p id="who" class="muted"></p>
+    <button id="play" type="button">Başla</button>
+    <ol id="board" class="board"></ol>
+  </section>
+
+  <section id="settings" class="panel" hidden>
+    <h2>Ayarlar</h2>
+    <label><input id="optSound" type="checkbox" /> Ses</label>
+    <label>Zorluk
+      <select id="optDifficulty">
+        <option value="kolay">Kolay</option>
+        <option value="orta">Orta</option>
+        <option value="zor">Zor</option>
+      </select>
+    </label>
+    <button id="closeSettings" type="button">Kapat</button>
+  </section>
+
+  <!-- Arcadex SDK: baştaki "/" ile. Yerel testte bu dosyayı sdk/arcadex.js olarak koy. -->
+  <script src="/sdk/arcadex.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
